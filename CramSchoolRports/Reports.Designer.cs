@@ -48,6 +48,7 @@
             // 
             // reportViewer1
             // 
+            this.reportViewer1.AutoSize = true;
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
@@ -66,6 +67,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataTable)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

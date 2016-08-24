@@ -250,7 +250,7 @@ namespace CramSchoolReports
                                         q13 = x.q13,
                                         q14 = x.q14,
                                         q15 = x.q15,
-                                        avr = x.q1 
+                                        avr = (x.q1 
                                             + x.q2
                                             + x.q3
                                             + x.q4
@@ -264,8 +264,12 @@ namespace CramSchoolReports
                                             + x.q12
                                             + x.q13
                                             + x.q14
-                                            + x.q15
-                                            / 15
+                                            + x.q15)
+                                            / 15,
+                                        rank1 = (x.q1 + x.q2 + x.q3 + x.q4 + x.q5) / 5,
+                                        rank2 = (x.q6 + x.q7 + x.q8 + x.q9) / 4,
+                                        rank3 = (x.q10 + x.q11 + x.q12 + x.q13) / 4,
+                                        rank4 = (x.q14 + x.q15) / 2
                                     })
                                     .ToArray();
 
