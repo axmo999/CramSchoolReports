@@ -198,7 +198,8 @@ namespace CramSchoolReports.Commons
         public static Dictionary<string, string> reports = new Dictionary<string, string>
         {
             { "出席一覧", "StudentMonthlyAttend" },
-            { "指導一覧", "StudentMonthlyGuid" }
+            { "指導一覧", "StudentMonthlyGuid" },
+            { "自立チェック一覧", "StudentMonthlyIndependent" }
         };
 
     }

@@ -182,5 +182,104 @@ namespace CramSchoolReports
 
         }
 
+        /// <summary>
+        /// 自立リスト作成
+        /// </summary>
+        /// <param name="Year"></param>
+        /// <param name="Month"></param>
+        /// <param name="OfficeNum"></param>
+        /// <returns></returns>
+        public Array getIndependent(int Year, int Month, int OfficeNum)
+        {
+
+            try
+            {
+                // 変数より月の最初と最終日を設定
+                DateTime FDM = Commons.Utility.getFDM(Year, Month);
+                DateTime LDM = Commons.Utility.getLDM(Year, Month);
+
+
+                // 当月の自立リストを取得
+                var student_independent_list = studentdb
+                                    .students_independence
+                                    .Where(x => x.week >= FDM && x.week <= LDM)
+                                    .Include(s => s.students_m)
+                                    .Where(x => x.students_m.office_id == OfficeNum)
+                                    .Select(x => new
+                                    {
+                                        students_m = x.students_m,
+                                        guide_date = x.week,
+                                        teachers_m = x.teachers_m,
+                                        q1 = x.question01,
+                                        q2 = x.question02,
+                                        q3 = x.question03,
+                                        q4 = x.question04,
+                                        q5 = x.question05,
+                                        q6 = x.question06,
+                                        q7 = x.question07,
+                                        q8 = x.question08,
+                                        q9 = x.question09,
+                                        q10 = x.question10,
+                                        q11 = x.question11,
+                                        q12 = x.question12,
+                                        q13 = x.question13,
+                                        q14 = x.question14,
+                                        q15 = x.question15,
+                                    })
+                                    .ToList()
+                                    .Select(x => new
+                                    {
+                                        name = x.students_m.display_name,
+                                        school = x.students_m.schools_m.name,
+                                        grade = x.students_m.grade,
+                                        division = x.students_m.schools_m.division_id,
+                                        date = x.guide_date.ToString("yyyy-MM-dd"),
+                                        teacher = x.teachers_m.display_name,
+                                        q1 = x.q1,
+                                        q2 = x.q2,
+                                        q3 = x.q3,
+                                        q4 = x.q4,
+                                        q5 = x.q5,
+                                        q6 = x.q6,
+                                        q7 = x.q7,
+                                        q8 = x.q8,
+                                        q9 = x.q9,
+                                        q10 = x.q10,
+                                        q11 = x.q11,
+                                        q12 = x.q12,
+                                        q13 = x.q13,
+                                        q14 = x.q14,
+                                        q15 = x.q15,
+                                        avr = x.q1 
+                                            + x.q2
+                                            + x.q3
+                                            + x.q4
+                                            + x.q5
+                                            + x.q6
+                                            + x.q7
+                                            + x.q8
+                                            + x.q9
+                                            + x.q10
+                                            + x.q11
+                                            + x.q12
+                                            + x.q13
+                                            + x.q14
+                                            + x.q15
+                                            / 15
+                                    })
+                                    .ToArray();
+
+                return student_independent_list;
+
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+                return null;
+            }
+
+        }
+
+
     }
 }

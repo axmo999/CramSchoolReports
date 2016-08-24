@@ -76,6 +76,25 @@ namespace CramSchoolReports
                     reportViewer1.LocalReport.DisplayName = _Year + "年" + _Month + "月分指導一覧表" + "　" + _OfficeName;
                     break;
 
+                case "StudentMonthlyIndependent":
+                    _stream = _assembly.GetManifestResourceStream("CramSchoolReports.Reports.StudentMonthlyIndependent.rdlc");
+
+                    this.reportViewer1.ProcessingMode = ProcessingMode.Local;
+                    this.reportViewer1.LocalReport.LoadReportDefinition(_stream);
+                    this.reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("dataTable", this._getData.getIndependent(_Year, _Month, _OfficeNum)));
+
+                    List<ReportParameter> ListParametersIndependent = new List<ReportParameter>();
+                    ReportParameter paramYearIndependent = new ReportParameter("Year", _Year.ToString());
+                    ReportParameter paramMonthIndependent = new ReportParameter("Month", _Month.ToString());
+                    ReportParameter paramOfficeIndependent = new ReportParameter("OfficeName", _OfficeName.ToString());
+                    ListParametersIndependent.Add(paramYearIndependent);
+                    ListParametersIndependent.Add(paramMonthIndependent);
+                    ListParametersIndependent.Add(paramOfficeIndependent);
+                    reportViewer1.LocalReport.SetParameters(ListParametersIndependent);
+
+                    reportViewer1.LocalReport.DisplayName = _Year + "年" + _Month + "月分自立チェック表" + "　" + _OfficeName;
+                    break;
+
             } 
             
             
