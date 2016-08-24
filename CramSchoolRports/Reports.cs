@@ -77,7 +77,7 @@ namespace CramSchoolReports
                     break;
 
                 case "StudentMonthlyIndependent":
-                    _stream = _assembly.GetManifestResourceStream("CramSchoolReports.Reports.StudentMonthlyIndependent.rdlc");
+                    _stream = _assembly.GetManifestResourceStream("CramSchoolReports.Reports.StudentMonthlyIndependent2.rdlc");
 
                     this.reportViewer1.ProcessingMode = ProcessingMode.Local;
                     this.reportViewer1.LocalReport.LoadReportDefinition(_stream);

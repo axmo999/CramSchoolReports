@@ -185,9 +185,13 @@
     <EmbeddedResource Include="Reports\StudentMonthlyGuid.rdlc">
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\StudentMonthlyIndependent2.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\StudentMonthlyIndependent.rdlc">
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\StudentMonthlyReports.rdlc" />
     <None Include="Models\dataTables.xsc">
       <DependentUpon>dataTables.xsd</DependentUpon>
     </None>
