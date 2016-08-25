@@ -6,7 +6,7 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>18cm</Width>
+              <Width>17.75985cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -173,6 +173,8 @@
                                           <TextRun>
                                             <Value>=Avg(Fields!avr.Value)</Value>
                                             <Style>
+                                              <FontFamily>Meiryo UI</FontFamily>
+                                              <FontSize>12pt</FontSize>
                                               <Format>0.0</Format>
                                             </Style>
                                           </TextRun>
@@ -183,8 +185,8 @@
                                       </Paragraph>
                                     </Paragraphs>
                                     <rd:DefaultName>Textbox17</rd:DefaultName>
-                                    <Top>1.80771cm</Top>
-                                    <Left>4.97509cm</Left>
+                                    <Top>1.77243cm</Top>
+                                    <Left>4.87243cm</Left>
                                     <Height>0.65292cm</Height>
                                     <Width>1.33583cm</Width>
                                     <ZIndex>2</ZIndex>
@@ -205,9 +207,10 @@
                                       <Paragraph>
                                         <TextRuns>
                                           <TextRun>
-                                            <Value>ランク１平均：</Value>
+                                            <Value>="ランク１平均：" + Avg(Fields!rank1.Value)</Value>
                                             <Style>
                                               <FontFamily>Meiryo UI</FontFamily>
+                                              <FontSize>12pt</FontSize>
                                             </Style>
                                           </TextRun>
                                         </TextRuns>
@@ -218,42 +221,8 @@
                                     <Top>2.60174cm</Top>
                                     <Left>0.31432cm</Left>
                                     <Height>0.65292cm</Height>
-                                    <Width>2.34125cm</Width>
+                                    <Width>3.63771cm</Width>
                                     <ZIndex>3</ZIndex>
-                                    <Style>
-                                      <Border>
-                                        <Style>None</Style>
-                                      </Border>
-                                      <PaddingLeft>2pt</PaddingLeft>
-                                      <PaddingRight>2pt</PaddingRight>
-                                      <PaddingTop>2pt</PaddingTop>
-                                      <PaddingBottom>2pt</PaddingBottom>
-                                    </Style>
-                                  </Textbox>
-                                  <Textbox Name="Textbox19">
-                                    <CanGrow>true</CanGrow>
-                                    <KeepTogether>true</KeepTogether>
-                                    <Paragraphs>
-                                      <Paragraph>
-                                        <TextRuns>
-                                          <TextRun>
-                                            <Value>=Avg(Fields!rank1.Value)</Value>
-                                            <Style>
-                                              <Format>0.0</Format>
-                                            </Style>
-                                          </TextRun>
-                                        </TextRuns>
-                                        <Style>
-                                          <TextAlign>Left</TextAlign>
-                                        </Style>
-                                      </Paragraph>
-                                    </Paragraphs>
-                                    <rd:DefaultName>Textbox17</rd:DefaultName>
-                                    <Top>2.60174cm</Top>
-                                    <Left>2.83196cm</Left>
-                                    <Height>0.65292cm</Height>
-                                    <Width>0.80257cm</Width>
-                                    <ZIndex>4</ZIndex>
                                     <Style>
                                       <Border>
                                         <Style>None</Style>
@@ -271,9 +240,10 @@
                                       <Paragraph>
                                         <TextRuns>
                                           <TextRun>
-                                            <Value>ランク２平均：</Value>
+                                            <Value>="ランク２平均：" + Avg(Fields!rank2.Value)</Value>
                                             <Style>
                                               <FontFamily>Meiryo UI</FontFamily>
+                                              <FontSize>12pt</FontSize>
                                             </Style>
                                           </TextRun>
                                         </TextRuns>
@@ -282,44 +252,10 @@
                                     </Paragraphs>
                                     <rd:DefaultName>Textbox16</rd:DefaultName>
                                     <Top>2.60174cm</Top>
-                                    <Left>3.96967cm</Left>
+                                    <Left>4.77224cm</Left>
                                     <Height>0.65292cm</Height>
                                     <Width>2.34125cm</Width>
-                                    <ZIndex>5</ZIndex>
-                                    <Style>
-                                      <Border>
-                                        <Style>None</Style>
-                                      </Border>
-                                      <PaddingLeft>2pt</PaddingLeft>
-                                      <PaddingRight>2pt</PaddingRight>
-                                      <PaddingTop>2pt</PaddingTop>
-                                      <PaddingBottom>2pt</PaddingBottom>
-                                    </Style>
-                                  </Textbox>
-                                  <Textbox Name="Textbox21">
-                                    <CanGrow>true</CanGrow>
-                                    <KeepTogether>true</KeepTogether>
-                                    <Paragraphs>
-                                      <Paragraph>
-                                        <TextRuns>
-                                          <TextRun>
-                                            <Value>=Avg(Fields!rank2.Value)</Value>
-                                            <Style>
-                                              <Format>0.0</Format>
-                                            </Style>
-                                          </TextRun>
-                                        </TextRuns>
-                                        <Style>
-                                          <TextAlign>Left</TextAlign>
-                                        </Style>
-                                      </Paragraph>
-                                    </Paragraphs>
-                                    <rd:DefaultName>Textbox17</rd:DefaultName>
-                                    <Top>2.60174cm</Top>
-                                    <Left>6.48731cm</Left>
-                                    <Height>0.65292cm</Height>
-                                    <Width>0.80257cm</Width>
-                                    <ZIndex>6</ZIndex>
+                                    <ZIndex>4</ZIndex>
                                     <Style>
                                       <Border>
                                         <Style>None</Style>
@@ -337,9 +273,10 @@
                                       <Paragraph>
                                         <TextRuns>
                                           <TextRun>
-                                            <Value>ランク３平均：</Value>
+                                            <Value>="ランク３平均：" + Avg(Fields!rank3.Value)</Value>
                                             <Style>
                                               <FontFamily>Meiryo UI</FontFamily>
+                                              <FontSize>12pt</FontSize>
                                             </Style>
                                           </TextRun>
                                         </TextRuns>
@@ -348,44 +285,10 @@
                                     </Paragraphs>
                                     <rd:DefaultName>Textbox16</rd:DefaultName>
                                     <Top>2.60174cm</Top>
-                                    <Left>7.69653cm</Left>
+                                    <Left>7.83764cm</Left>
                                     <Height>0.65292cm</Height>
-                                    <Width>2.34125cm</Width>
-                                    <ZIndex>7</ZIndex>
-                                    <Style>
-                                      <Border>
-                                        <Style>None</Style>
-                                      </Border>
-                                      <PaddingLeft>2pt</PaddingLeft>
-                                      <PaddingRight>2pt</PaddingRight>
-                                      <PaddingTop>2pt</PaddingTop>
-                                      <PaddingBottom>2pt</PaddingBottom>
-                                    </Style>
-                                  </Textbox>
-                                  <Textbox Name="Textbox23">
-                                    <CanGrow>true</CanGrow>
-                                    <KeepTogether>true</KeepTogether>
-                                    <Paragraphs>
-                                      <Paragraph>
-                                        <TextRuns>
-                                          <TextRun>
-                                            <Value>=Avg(Fields!rank3.Value)</Value>
-                                            <Style>
-                                              <Format>0.0</Format>
-                                            </Style>
-                                          </TextRun>
-                                        </TextRuns>
-                                        <Style>
-                                          <TextAlign>Left</TextAlign>
-                                        </Style>
-                                      </Paragraph>
-                                    </Paragraphs>
-                                    <rd:DefaultName>Textbox17</rd:DefaultName>
-                                    <Top>2.60174cm</Top>
-                                    <Left>10.21417cm</Left>
-                                    <Height>0.65292cm</Height>
-                                    <Width>0.80257cm</Width>
-                                    <ZIndex>8</ZIndex>
+                                    <Width>3.00271cm</Width>
+                                    <ZIndex>5</ZIndex>
                                     <Style>
                                       <Border>
                                         <Style>None</Style>
@@ -403,9 +306,10 @@
                                       <Paragraph>
                                         <TextRuns>
                                           <TextRun>
-                                            <Value>ランク４平均：</Value>
+                                            <Value>="ランク４平均：" + Avg(Fields!rank4.Value)</Value>
                                             <Style>
                                               <FontFamily>Meiryo UI</FontFamily>
+                                              <FontSize>12pt</FontSize>
                                             </Style>
                                           </TextRun>
                                         </TextRuns>
@@ -414,44 +318,10 @@
                                     </Paragraphs>
                                     <rd:DefaultName>Textbox16</rd:DefaultName>
                                     <Top>2.60174cm</Top>
-                                    <Left>11.41929cm</Left>
+                                    <Left>12.22186cm</Left>
                                     <Height>0.65292cm</Height>
                                     <Width>2.34125cm</Width>
-                                    <ZIndex>9</ZIndex>
-                                    <Style>
-                                      <Border>
-                                        <Style>None</Style>
-                                      </Border>
-                                      <PaddingLeft>2pt</PaddingLeft>
-                                      <PaddingRight>2pt</PaddingRight>
-                                      <PaddingTop>2pt</PaddingTop>
-                                      <PaddingBottom>2pt</PaddingBottom>
-                                    </Style>
-                                  </Textbox>
-                                  <Textbox Name="Textbox25">
-                                    <CanGrow>true</CanGrow>
-                                    <KeepTogether>true</KeepTogether>
-                                    <Paragraphs>
-                                      <Paragraph>
-                                        <TextRuns>
-                                          <TextRun>
-                                            <Value>=Avg(Fields!rank4.Value)</Value>
-                                            <Style>
-                                              <Format>0.0</Format>
-                                            </Style>
-                                          </TextRun>
-                                        </TextRuns>
-                                        <Style>
-                                          <TextAlign>Left</TextAlign>
-                                        </Style>
-                                      </Paragraph>
-                                    </Paragraphs>
-                                    <rd:DefaultName>Textbox17</rd:DefaultName>
-                                    <Top>2.60174cm</Top>
-                                    <Left>13.93693cm</Left>
-                                    <Height>0.65292cm</Height>
-                                    <Width>0.80257cm</Width>
-                                    <ZIndex>10</ZIndex>
+                                    <ZIndex>6</ZIndex>
                                     <Style>
                                       <Border>
                                         <Style>None</Style>
@@ -2711,7 +2581,7 @@
                                     <Left>0.31432cm</Left>
                                     <Height>15.29182cm</Height>
                                     <Width>13.54711cm</Width>
-                                    <ZIndex>11</ZIndex>
+                                    <ZIndex>7</ZIndex>
                                     <Style>
                                       <Border>
                                         <Style>None</Style>
@@ -2739,7 +2609,7 @@
                                     <Left>10.21417cm</Left>
                                     <Height>0.83812cm</Height>
                                     <Width>3.32021cm</Width>
-                                    <ZIndex>12</ZIndex>
+                                    <ZIndex>8</ZIndex>
                                     <Style>
                                       <Border>
                                         <Style>None</Style>
@@ -2768,10 +2638,10 @@
                                     </Paragraphs>
                                     <rd:DefaultName>grade1</rd:DefaultName>
                                     <Top>0.46688cm</Top>
-                                    <Left>14.43964cm</Left>
+                                    <Left>13.93693cm</Left>
                                     <Height>0.83812cm</Height>
                                     <Width>3.32021cm</Width>
-                                    <ZIndex>13</ZIndex>
+                                    <ZIndex>9</ZIndex>
                                     <Style>
                                       <Border>
                                         <Style>None</Style>
@@ -2812,8 +2682,8 @@
         </TablixRowHierarchy>
         <DataSetName>dataTable</DataSetName>
         <Top>0.02328cm</Top>
-        <Height>21.86447cm</Height>
-        <Width>18cm</Width>
+        <Height>21.86448cm</Height>
+        <Width>17.75985cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2824,7 +2694,7 @@
     <Height>8.61723in</Height>
     <Style />
   </Body>
-  <Width>7.08661in</Width>
+  <Width>6.99207in</Width>
   <Page>
     <PageHeader>
       <Height>1.05834cm</Height>

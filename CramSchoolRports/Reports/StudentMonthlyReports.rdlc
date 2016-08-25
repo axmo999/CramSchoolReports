@@ -96,7 +96,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>="記入者" + Parameters!Teacher</Value>
+                  <Value>="記入者" + Parameters!Teacher.Value</Value>
                   <Style>
                     <FontFamily>Meiryo UI</FontFamily>
                   </Style>
