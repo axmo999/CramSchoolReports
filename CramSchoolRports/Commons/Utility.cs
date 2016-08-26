@@ -199,7 +199,8 @@ namespace CramSchoolReports.Commons
         {
             { "出席一覧", "StudentMonthlyAttend" },
             { "指導一覧", "StudentMonthlyGuid" },
-            { "自立チェック一覧", "StudentMonthlyIndependent" }
+            { "自立チェック一覧", "StudentMonthlyIndependent" },
+            { "月次レポート", "StudentMonthlyReports" }
         };
 
     }

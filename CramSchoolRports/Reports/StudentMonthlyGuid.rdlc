@@ -6,13 +6,13 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.83909cm</Width>
+              <Width>3.06052cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.74813cm</Width>
+              <Width>1.96956cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>13.4937cm</Width>
+              <Width>13.71513cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -59,7 +59,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.78521cm</Height>
+              <Height>0.97042cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -73,7 +73,7 @@
                               <Value>=Fields!school.Value + " " + Fields!grade.Value</Value>
                               <Style>
                                 <FontFamily>Meiryo UI</FontFamily>
-                                <FontSize>13pt</FontSize>
+                                <FontSize>14pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -115,7 +115,7 @@
                               <Value>=Fields!date.Value</Value>
                               <Style>
                                 <FontFamily>Meiryo UI</FontFamily>
-                                <FontSize>11pt</FontSize>
+                                <FontSize>12pt</FontSize>
                                 <FontWeight>SemiBold</FontWeight>
                               </Style>
                             </TextRun>
@@ -131,6 +131,7 @@
                           <Style>Solid</Style>
                         </Border>
                         <BackgroundColor>LightGrey</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -164,7 +165,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>teacher</rd:DefaultName>
@@ -173,6 +176,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -197,7 +201,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>classes</rd:DefaultName>
@@ -206,6 +212,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -239,7 +246,8 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>10pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
@@ -347,10 +355,9 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>dataTable</DataSetName>
-        <Top>0.49954cm</Top>
-        <Left>0.33196cm</Left>
-        <Height>3.54873cm</Height>
-        <Width>18.08092cm</Width>
+        <Top>0.10583cm</Top>
+        <Height>3.73394cm</Height>
+        <Width>18.7452cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -359,13 +366,13 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>1.69287in</Height>
+    <Height>2.00537in</Height>
     <Style />
   </Body>
-  <Width>7.38458in</Width>
+  <Width>7.38in</Width>
   <Page>
     <PageHeader>
-      <Height>1.47312cm</Height>
+      <Height>0.89104cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -383,13 +390,13 @@
                   </Style>
                 </TextRun>
               </TextRuns>
-              <Style />
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
             </Paragraph>
           </Paragraphs>
-          <Top>0.3175cm</Top>
-          <Left>0.33196cm</Left>
           <Height>0.83812cm</Height>
-          <Width>18.08092cm</Width>
+          <Width>18.7452cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -408,7 +415,7 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>1.23183cm</Height>
+      <Height>0.99371cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -443,8 +450,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>PageNumber</rd:DefaultName>
-          <Top>0.31592cm</Top>
-          <Left>15.41288cm</Left>
+          <Top>0.17639cm</Top>
+          <Left>15.7452cm</Left>
           <Height>0.6cm</Height>
           <Width>3cm</Width>
           <Style>
@@ -474,8 +481,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>ReportName</rd:DefaultName>
-          <Top>0.31592cm</Top>
-          <Left>0.29399cm</Left>
+          <Top>0.17639cm</Top>
           <Height>0.6cm</Height>
           <Width>3.4525cm</Width>
           <ZIndex>1</ZIndex>
@@ -511,7 +517,7 @@
               <Style />
             </Paragraph>
           </Paragraphs>
-          <Top>0.31592cm</Top>
+          <Top>0.17639cm</Top>
           <Left>4.17978cm</Left>
           <Height>0.6cm</Height>
           <Width>5.54271cm</Width>
