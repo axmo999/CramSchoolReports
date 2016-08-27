@@ -97,7 +97,7 @@ namespace CramSchoolReports
 
                 case "StudentMonthlyReports":
 
-                    _stream = _assembly.GetManifestResourceStream("CramSchoolReports.Reports.StudentMonthlyAttend.rdlc");
+                    _stream = _assembly.GetManifestResourceStream("CramSchoolReports.Reports.StudentMonthlyReports.rdlc");
 
                     this.reportViewer1.ProcessingMode = ProcessingMode.Local;
                     this.reportViewer1.LocalReport.LoadReportDefinition(_stream);
@@ -107,9 +107,11 @@ namespace CramSchoolReports
                     ReportParameter paramYearReports = new ReportParameter("Year", _Year.ToString());
                     ReportParameter paramMonthReports = new ReportParameter("Month", _Month.ToString());
                     ReportParameter paramOfficeReports = new ReportParameter("OfficeName", _OfficeName.ToString());
+                    ReportParameter paramTeacherReports = new ReportParameter("Teacher", "admin");
                     ListParametersReports.Add(paramYearReports);
                     ListParametersReports.Add(paramMonthReports);
                     ListParametersReports.Add(paramOfficeReports);
+                    ListParametersReports.Add(paramTeacherReports);
                     reportViewer1.LocalReport.SetParameters(ListParametersReports);
 
                     reportViewer1.LocalReport.DisplayName = _Year + "年" + _Month + "月分出席一覧表" + "　" + _OfficeName;

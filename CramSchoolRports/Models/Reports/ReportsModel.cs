@@ -22,6 +22,8 @@ namespace CramSchoolReports.Models.Reports
 
         public int neccesarycount { get; set; }
 
+        public int absence { get; set; }
+
         public string q1 { get; set; }
 
         public string q2 { get; set; }
