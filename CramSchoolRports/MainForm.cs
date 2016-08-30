@@ -37,7 +37,7 @@ namespace CramSchoolReports
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            this.comboBoxYear.Items.AddRange(_getData.getYearData());
+            //this.comboBoxYear.Items.AddRange(_getData.getYearData());
 
             this.comboBoxOffice.DataSource = new BindingSource(_getData.getOffice(), null);
             this.comboBoxOffice.DisplayMember = "Value";
@@ -51,14 +51,14 @@ namespace CramSchoolReports
 
         private void comboBoxYear_SelectedIndexChanged(object sender, EventArgs e)
         {
-            _year = Convert.ToInt32(this.comboBoxYear.SelectedItem);
-            this.comboBoxMonth.Items.AddRange(_getData.getMonthData(_year));
+            //_year = Convert.ToInt32(this.comboBoxYear.SelectedItem);
+            //this.comboBoxMonth.Items.AddRange(_getData.getMonthData(_year));
         }
 
         private void buttonCreate_Click(object sender, EventArgs e)
         {
-            _year = Convert.ToInt32(this.comboBoxYear.SelectedItem);
-            _month = Convert.ToInt32(this.comboBoxMonth.SelectedItem);
+            _year = int.Parse(this.textBoxYear.Text);
+            _month = int.Parse(this.textBoxMonth.Text);
             _officeNum = Convert.ToInt32(this.comboBoxOffice.SelectedValue);
             _officeName = this.comboBoxOffice.Text.ToString();
             _report = this.comboBoxReport.SelectedValue.ToString();
@@ -71,6 +71,24 @@ namespace CramSchoolReports
             reports._Reports = _report;
             reports.Show();
 
+        }
+
+        private void textBoxYear_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //0～9と、バックスペース以外の時は、イベントをキャンセルする
+            if ((e.KeyChar < '0' || '9' < e.KeyChar) && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxMonth_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //0～9と、バックスペース以外の時は、イベントをキャンセルする
+            if ((e.KeyChar < '0' || '9' < e.KeyChar) && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
         }
     }
 }

@@ -28,51 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBoxYear = new System.Windows.Forms.ComboBox();
             this.Year = new System.Windows.Forms.Label();
             this.labelMonth = new System.Windows.Forms.Label();
-            this.comboBoxMonth = new System.Windows.Forms.ComboBox();
             this.labelOffice = new System.Windows.Forms.Label();
             this.comboBoxOffice = new System.Windows.Forms.ComboBox();
             this.labelReport = new System.Windows.Forms.Label();
             this.comboBoxReport = new System.Windows.Forms.ComboBox();
             this.buttonCreate = new System.Windows.Forms.Button();
+            this.textBoxYear = new System.Windows.Forms.TextBox();
+            this.textBoxMonth = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // comboBoxYear
-            // 
-            this.comboBoxYear.FormattingEnabled = true;
-            this.comboBoxYear.Location = new System.Drawing.Point(151, 16);
-            this.comboBoxYear.Name = "comboBoxYear";
-            this.comboBoxYear.Size = new System.Drawing.Size(121, 20);
-            this.comboBoxYear.TabIndex = 0;
-            this.comboBoxYear.SelectedIndexChanged += new System.EventHandler(this.comboBoxYear_SelectedIndexChanged);
             // 
             // Year
             // 
             this.Year.AutoSize = true;
             this.Year.Location = new System.Drawing.Point(13, 19);
             this.Year.Name = "Year";
-            this.Year.Size = new System.Drawing.Size(91, 12);
+            this.Year.Size = new System.Drawing.Size(101, 12);
             this.Year.TabIndex = 1;
-            this.Year.Text = "年を選んでください";
+            this.Year.Text = "年を入力してください";
             // 
             // labelMonth
             // 
             this.labelMonth.AutoSize = true;
             this.labelMonth.Location = new System.Drawing.Point(13, 50);
             this.labelMonth.Name = "labelMonth";
-            this.labelMonth.Size = new System.Drawing.Size(91, 12);
+            this.labelMonth.Size = new System.Drawing.Size(101, 12);
             this.labelMonth.TabIndex = 3;
-            this.labelMonth.Text = "月を選んでください";
-            // 
-            // comboBoxMonth
-            // 
-            this.comboBoxMonth.FormattingEnabled = true;
-            this.comboBoxMonth.Location = new System.Drawing.Point(151, 47);
-            this.comboBoxMonth.Name = "comboBoxMonth";
-            this.comboBoxMonth.Size = new System.Drawing.Size(121, 20);
-            this.comboBoxMonth.TabIndex = 2;
+            this.labelMonth.Text = "月を入力してください";
             // 
             // labelOffice
             // 
@@ -118,20 +101,36 @@
             this.buttonCreate.UseVisualStyleBackColor = true;
             this.buttonCreate.Click += new System.EventHandler(this.buttonCreate_Click);
             // 
+            // textBoxYear
+            // 
+            this.textBoxYear.Location = new System.Drawing.Point(151, 16);
+            this.textBoxYear.Name = "textBoxYear";
+            this.textBoxYear.Size = new System.Drawing.Size(121, 19);
+            this.textBoxYear.TabIndex = 9;
+            this.textBoxYear.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxYear_KeyPress);
+            // 
+            // textBoxMonth
+            // 
+            this.textBoxMonth.Location = new System.Drawing.Point(151, 47);
+            this.textBoxMonth.Name = "textBoxMonth";
+            this.textBoxMonth.Size = new System.Drawing.Size(121, 19);
+            this.textBoxMonth.TabIndex = 10;
+            this.textBoxMonth.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxMonth_KeyPress);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 215);
+            this.ClientSize = new System.Drawing.Size(291, 215);
+            this.Controls.Add(this.textBoxMonth);
+            this.Controls.Add(this.textBoxYear);
             this.Controls.Add(this.buttonCreate);
             this.Controls.Add(this.labelReport);
             this.Controls.Add(this.comboBoxReport);
             this.Controls.Add(this.labelOffice);
             this.Controls.Add(this.comboBoxOffice);
             this.Controls.Add(this.labelMonth);
-            this.Controls.Add(this.comboBoxMonth);
             this.Controls.Add(this.Year);
-            this.Controls.Add(this.comboBoxYear);
             this.Name = "MainForm";
             this.Text = "生徒管理システムレポート出力";
             this.Load += new System.EventHandler(this.MainForm_Load);
@@ -142,15 +141,15 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBoxYear;
         private System.Windows.Forms.Label Year;
         private System.Windows.Forms.Label labelMonth;
-        private System.Windows.Forms.ComboBox comboBoxMonth;
         private System.Windows.Forms.Label labelOffice;
         private System.Windows.Forms.ComboBox comboBoxOffice;
         private System.Windows.Forms.Label labelReport;
         private System.Windows.Forms.ComboBox comboBoxReport;
         private System.Windows.Forms.Button buttonCreate;
+        private System.Windows.Forms.TextBox textBoxYear;
+        private System.Windows.Forms.TextBox textBoxMonth;
     }
 }
 

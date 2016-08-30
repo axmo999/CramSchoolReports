@@ -2424,7 +2424,7 @@
                               <DataSetName>dataTable</DataSetName>
                               <Top>1.07221cm</Top>
                               <Left>14.15606cm</Left>
-                              <Height>16.16592cm</Height>
+                              <Height>16.16594cm</Height>
                               <Width>13.26854cm</Width>
                               <Style>
                                 <Border>
@@ -2826,6 +2826,7 @@
                                               <PaddingBottom>2pt</PaddingBottom>
                                             </Style>
                                           </Textbox>
+                                          <rd:Selected>true</rd:Selected>
                                         </CellContents>
                                       </TablixCell>
                                     </TablixCells>

@@ -109,9 +109,14 @@ namespace CramSchoolReports
                                     .Include(s => s.students_m)
                                     .Where(x => x.students_m.office_id == OfficeNum)
                                     .GroupBy(x => x.students_id)
-                                    .Select(x => new { name = x.FirstOrDefault().students_m, count = x.Count() })
+                                    .Select(x => new
+                                    {
+                                        name = x.FirstOrDefault().students_m,
+                                        count = x.Count(),
+                                        absence = x.Where(s => s.start_time == s.end_time).Count()
+                                    })
                                     .ToList()
-                                    .Select(x => new { name = x.name.display_name, count = x.count, per = Convert.ToDecimal(x.count) / attend_count * 100 + "%",neccesarycount = attend_count, school = x.name.schools_m.name, grade = x.name.grade, division = Convert.ToInt32(x.name.schools_m.division_id) })
+                                    .Select(x => new { name = x.name.display_name, count = x.count - x.absence, per = Convert.ToDecimal(x.count - x.absence) / attend_count * 100 + "%", neccesarycount = attend_count, school = x.name.schools_m.name, grade = x.name.grade, division = Convert.ToInt32(x.name.schools_m.division_id) })
                                     .ToArray();
 
                 return student_attend_list;
@@ -314,8 +319,8 @@ namespace CramSchoolReports
                                         school = x.name.schools_m.name, 
                                         grade = x.name.grade, 
                                         division = Convert.ToInt32(x.name.schools_m.division_id),
-                                        count = x.count,
-                                        per = Convert.ToDecimal(x.count) / attend_count * 100 + "%",
+                                        count = x.count - x.absence,
+                                        per = Convert.ToDecimal(x.count - x.absence) / attend_count * 100 + "%",
                                         neccesarycount = attend_count,
                                         absence = x.absence
                                     })
