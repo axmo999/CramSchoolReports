@@ -137,6 +137,14 @@
           <DataField>rank4</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
+        <Field Name="study">
+          <DataField>study</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="life">
+          <DataField>life</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>dataTable</rd:DataSetName>
@@ -2826,7 +2834,6 @@
                                               <PaddingBottom>2pt</PaddingBottom>
                                             </Style>
                                           </Textbox>
-                                          <rd:Selected>true</rd:Selected>
                                         </CellContents>
                                       </TablixCell>
                                     </TablixCells>
@@ -3153,21 +3160,23 @@
                                     <TablixCells>
                                       <TablixCell>
                                         <CellContents>
-                                          <Textbox Name="Textbox8">
+                                          <Textbox Name="study">
                                             <CanGrow>true</CanGrow>
                                             <KeepTogether>true</KeepTogether>
                                             <Paragraphs>
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value />
-                                                    <Style />
+                                                    <Value>=Fields!study.Value</Value>
+                                                    <Style>
+                                                      <FontFamily>Meiryo UI</FontFamily>
+                                                    </Style>
                                                   </TextRun>
                                                 </TextRuns>
                                                 <Style />
                                               </Paragraph>
                                             </Paragraphs>
-                                            <rd:DefaultName>Textbox8</rd:DefaultName>
+                                            <rd:DefaultName>study</rd:DefaultName>
                                             <Style>
                                               <Border>
                                                 <Color>LightGrey</Color>
@@ -3180,6 +3189,7 @@
                                             </Style>
                                           </Textbox>
                                           <ColSpan>3</ColSpan>
+                                          <rd:Selected>true</rd:Selected>
                                         </CellContents>
                                       </TablixCell>
                                       <TablixCell />
@@ -3197,14 +3207,11 @@
                               </TablixColumnHierarchy>
                               <TablixRowHierarchy>
                                 <TablixMembers>
-                                  <TablixMember>
-                                    <KeepWithGroup>After</KeepWithGroup>
-                                  </TablixMember>
-                                  <TablixMember>
-                                    <Group Name="詳細" />
-                                  </TablixMember>
+                                  <TablixMember />
+                                  <TablixMember />
                                 </TablixMembers>
                               </TablixRowHierarchy>
+                              <DataSetName>dataTable</DataSetName>
                               <Top>5.587cm</Top>
                               <Left>0.29104cm</Left>
                               <Height>3.2cm</Height>
@@ -3287,8 +3294,10 @@
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value />
-                                                    <Style />
+                                                    <Value>=Fields!life.Value</Value>
+                                                    <Style>
+                                                      <FontFamily>Meiryo UI</FontFamily>
+                                                    </Style>
                                                   </TextRun>
                                                 </TextRuns>
                                                 <Style />
@@ -3324,14 +3333,11 @@
                               </TablixColumnHierarchy>
                               <TablixRowHierarchy>
                                 <TablixMembers>
-                                  <TablixMember>
-                                    <KeepWithGroup>After</KeepWithGroup>
-                                  </TablixMember>
-                                  <TablixMember>
-                                    <Group Name="詳細2" />
-                                  </TablixMember>
+                                  <TablixMember />
+                                  <TablixMember />
                                 </TablixMembers>
                               </TablixRowHierarchy>
+                              <DataSetName>dataTable</DataSetName>
                               <Top>9.616cm</Top>
                               <Left>0.29103cm</Left>
                               <Height>3.2cm</Height>
@@ -3451,12 +3457,8 @@
                               </TablixColumnHierarchy>
                               <TablixRowHierarchy>
                                 <TablixMembers>
-                                  <TablixMember>
-                                    <KeepWithGroup>After</KeepWithGroup>
-                                  </TablixMember>
-                                  <TablixMember>
-                                    <Group Name="詳細3" />
-                                  </TablixMember>
+                                  <TablixMember />
+                                  <TablixMember />
                                 </TablixMembers>
                               </TablixRowHierarchy>
                               <Top>13.64318cm</Top>

@@ -55,5 +55,9 @@ namespace CramSchoolReports.Models.Reports
         public string q15 { get; set; }
 
         public string avr { get; set; }
+
+        public string study { get; set; }
+
+        public string life { get; set; }
     }
 }

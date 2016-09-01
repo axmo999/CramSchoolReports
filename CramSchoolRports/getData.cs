@@ -302,6 +302,22 @@ namespace CramSchoolReports
                 // 当月の設定出席回数を取得
                 int attend_count = setdb.atteds_m.SingleOrDefault(x => x.year_month == FDM).count;
 
+                // 当月の学習生活リストを取得
+                var student_reports = studentdb
+                                        .monthly_reports
+                                        .Where(x => x.monthly_report_date >= FDM && x.monthly_report_date <= LDM)
+                                        .Include(s => s.students_m).Include(s => s.teachers_m)
+                                        .Where(x => x.students_m.office_id == OfficeNum).ToList()
+                                        .Select(x => new Models.Reports.ReportsModel() {
+                                            name = x.students_m.display_name,
+                                            school = x.students_m.schools_m.name,
+                                            grade = x.students_m.grade,
+                                            division = Convert.ToInt32(x.students_m.schools_m.division_id),
+                                            study = x.study_contents,
+                                            life = x.life_contents
+                                        }).ToList();
+
+
                 // 当月の出席リストを取得
                 var student_attend_list = studentdb
                                     .students_attendance
@@ -432,6 +448,7 @@ namespace CramSchoolReports
 
                 var report = student_attend_list
                             .Union(student_independent_list)
+                            .Union(student_reports)
                             .GroupBy(x => new { x.name, x.school, x.grade, x.division })
                             .Select(x => new Models.Reports.ReportsModel()
                             {
@@ -458,7 +475,9 @@ namespace CramSchoolReports
                                 q13 = x.Max(a => a.q13),
                                 q14 = x.Max(a => a.q14),
                                 q15 = x.Max(a => a.q15),
-                                avr = x.Max(a => a.avr)
+                                avr = x.Max(a => a.avr),
+                                study = x.Max(a => a.study),
+                                life = x.Max(a => a.life)
                             });
 
                 return report.ToArray();
