@@ -100,7 +100,15 @@ namespace CramSchoolReports
                 DateTime LDM = Commons.Utility.getLDM(Year, Month);
 
                 // 当月の設定出席回数を取得
-                Decimal attend_count = setdb.atteds_m.SingleOrDefault(x => x.year_month == FDM).count;
+                var attend_count = setdb.atteds_m.SingleOrDefault(x => x.year_month == FDM);
+
+                decimal week1 = attend_count.g0_count == 0 ? 1 : attend_count.g0_count;
+
+                decimal element = attend_count.g1_count == 0 ? 1 : attend_count.g1_count;
+
+                decimal j12 = attend_count.g2_count == 0 ? 1 : attend_count.g2_count;
+
+                decimal j3 = attend_count.g3_count == 0 ? 1 : attend_count.g3_count;
 
                 // 当月の出席リストを取得
                 var student_attend_list = studentdb
@@ -116,7 +124,16 @@ namespace CramSchoolReports
                                         absence = x.Where(s => s.start_time == s.end_time).Count()
                                     })
                                     .ToList()
-                                    .Select(x => new { name = x.name.display_name, count = x.count - x.absence, per = Convert.ToDecimal(x.count - x.absence) / attend_count * 100 + "%", neccesarycount = attend_count, school = x.name.schools_m.name, grade = x.name.grade, division = Convert.ToInt32(x.name.schools_m.division_id) })
+                                    .Select(x => new 
+                                        {
+                                            name = x.name.display_name,
+                                            count = x.count - x.absence,
+                                            per = (Convert.ToDecimal(x.count - x.absence) / getNeccesaryNum(x.name.grade, week1, element, j12, j3) * 100).ToString("0.0") + "%",
+                                            neccesarycount = getNeccesaryNum(x.name.grade, week1, element, j12, j3),
+                                            school = x.name.schools_m.name,
+                                            grade = x.name.grade,
+                                            division = Convert.ToInt32(x.name.schools_m.division_id)
+                                        })
                                     .ToArray();
 
                 return student_attend_list;
@@ -300,7 +317,15 @@ namespace CramSchoolReports
                 DateTime LDM = Commons.Utility.getLDM(Year, Month);
 
                 // 当月の設定出席回数を取得
-                int attend_count = setdb.atteds_m.SingleOrDefault(x => x.year_month == FDM).count;
+                var attend_count = setdb.atteds_m.SingleOrDefault(x => x.year_month == FDM);
+
+                decimal week1 = attend_count.g0_count == 0 ? 1 : attend_count.g0_count;
+
+                decimal element = attend_count.g1_count == 0 ? 1 : attend_count.g1_count;
+
+                decimal j12 = attend_count.g2_count == 0 ? 1 : attend_count.g2_count;
+
+                decimal j3 = attend_count.g3_count == 0 ? 1 : attend_count.g3_count;
 
                 // 当月の学習生活リストを取得
                 var student_reports = studentdb
@@ -336,8 +361,8 @@ namespace CramSchoolReports
                                         grade = x.name.grade, 
                                         division = Convert.ToInt32(x.name.schools_m.division_id),
                                         count = x.count - x.absence,
-                                        per = Convert.ToDecimal(x.count - x.absence) / attend_count * 100 + "%",
-                                        neccesarycount = attend_count,
+                                        per = (Convert.ToDecimal(x.count - x.absence) / getNeccesaryNum(x.name.grade, week1, element, j12, j3) * 100).ToString("0.0") + "%",
+                                        neccesarycount = (int)getNeccesaryNum(x.name.grade, week1, element, j12, j3),
                                         absence = x.absence
                                     })
                                     .ToList();
@@ -489,11 +514,29 @@ namespace CramSchoolReports
                 return null;
             }
 
-
-            
-
         }
 
+        public decimal getNeccesaryNum(string grade, decimal week1, decimal element, decimal j12, decimal j3)
+        {
+            switch (grade)
+            {
+                case "中学校１年生":
+                    return j12;
+                    
+                case "中学校２年生":
+                    return j12;
+
+                case "中学校３年生":
+                    return j3;
+
+                case "週１":
+                    return week1;
+
+                default:
+                    return element;
+
+            } 
+        }
 
     }
 }

@@ -178,7 +178,7 @@ namespace CramSchoolReports.Commons
             if (student_attend != null && month_attend != null)
             {
                 decimal attend_count = student_attend.Count();
-                decimal month_count = month_attend.count;
+                decimal month_count = month_attend.g0_count;
                 decimal rate = attend_count / month_count * 100;
                 return rate + "％";
             }

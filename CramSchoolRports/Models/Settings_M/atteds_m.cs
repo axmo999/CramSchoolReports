@@ -17,8 +17,20 @@
         public DateTime year_month { get; set; }
 
         [Required]
-        [Display(Name = "出席回数")]
-        public int count { get; set; }
+        [Display(Name = "週一出席回数")]
+        public int g0_count { get; set; }
+
+        [Required]
+        [Display(Name = "小学生出席回数")]
+        public int g1_count { get; set; }
+
+        [Required]
+        [Display(Name = "中１，２出席回数")]
+        public int g2_count { get; set; }
+
+        [Required]
+        [Display(Name = "中３出席回数")]
+        public int g3_count { get; set; }
 
         [Display(Name = "作成ユーザー")]
         public string create_user { get; set; }

@@ -28,7 +28,7 @@
     <WebPage>publish.htm</WebPage>
     <AutorunEnabled>true</AutorunEnabled>
     <ApplicationRevision>6</ApplicationRevision>
-    <ApplicationVersion>1.0.1.6</ApplicationVersion>
+    <ApplicationVersion>1.0.2.6</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -148,6 +148,7 @@
     <Compile Include="Models\Reports\ReportsModel.cs" />
     <Compile Include="Models\Settings_M\age_m.cs" />
     <Compile Include="Models\Settings_M\atteds_m.cs" />
+    <Compile Include="Models\Settings_M\attend_group_m.cs" />
     <Compile Include="Models\Settings_M\average_scores_m.cs" />
     <Compile Include="Models\Settings_M\classes_m.cs" />
     <Compile Include="Models\Settings_M\divisions_m.cs" />
