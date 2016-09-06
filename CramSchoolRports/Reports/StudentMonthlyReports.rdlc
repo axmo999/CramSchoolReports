@@ -2243,7 +2243,7 @@
                                                 <Paragraph>
                                                   <TextRuns>
                                                     <TextRun>
-                                                      <Value>14.塾内・社会で必要な姿勢を意識し習慣化している</Value>
+                                                      <Value>塾内・社会で必要な姿勢を意識し習慣化している</Value>
                                                       <Style>
                                                         <FontFamily>Meiryo UI</FontFamily>
                                                         <FontWeight>Heavy</FontWeight>
@@ -2321,7 +2321,7 @@
                                                 <Paragraph>
                                                   <TextRuns>
                                                     <TextRun>
-                                                      <Value>15.短期目標を設定し、計画的に取り組むことが出来る。また、中・長期的な目標を達成するために学習面、生活面の両方から正しい行いができる。</Value>
+                                                      <Value>短期目標を設定し、計画的に取り組むことが出来る。また、中・長期的な目標を達成するために学習面、生活面の両方から正しい行いができる。</Value>
                                                       <Style>
                                                         <FontFamily>Meiryo UI</FontFamily>
                                                         <FontWeight>Heavy</FontWeight>
@@ -3189,7 +3189,6 @@
                                             </Style>
                                           </Textbox>
                                           <ColSpan>3</ColSpan>
-                                          <rd:Selected>true</rd:Selected>
                                         </CellContents>
                                       </TablixCell>
                                       <TablixCell />
